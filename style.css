@@ -251,10 +251,8 @@ input:focus-visible::placeholder {
    margin: 0 auto;
    padding: 4rem 1.5rem;
    width: 50vw;
-   /*background-color: rgba(212 212 212/ .6);*/
-   /*background-color: rgb(30 30 30 / 85%);*/
-   background: rgb(70,48,33);
-   background: radial-gradient(circle, rgba(34,31,24,0.8) 0%, rgba(41,37,27,0.9) 35%, rgba(1,1,0,1) 100%);   border: 3px solid var(--color-black);
+   background: rgb(41 37 27);
+   background: radial-gradient(circle, rgba(34 31 24/ .8) 0%, rgba(41 37 27/ .9) 35%, rgba(1 1 0/ 1) 100%);   border: 3px solid var(--color-black);
    border-radius: 5px;
    cursor: default;
 }
@@ -323,7 +321,7 @@ input[type=number] {
    left: 0;
    bottom: 0;
    right: 0;
-   z-index: 50;
+   z-index: -10;
    padding: 30px;
    display: flex;
    justify-content: flex-start;
@@ -332,6 +330,8 @@ input[type=number] {
    height: 100vh;
    background-color: rgba(20 20 20/ .5);
    cursor: pointer;
+   opacity: 0;
+   /*transition: var(--transition-opacity);*/
 }
 
 .answer__window {
@@ -342,8 +342,8 @@ input[type=number] {
    justify-content: center;
    align-items: center;
    width: 35vw;
-   background: rgb(70,48,33);
-   background: radial-gradient(circle, rgba(34,31,24,0.8) 0%, rgba(41,37,27,0.9) 35%, rgba(1,1,0,1) 100%);   border: 3px solid var(--color-black);
+   background: rgba(41 37 27/ .9);
+   background: radial-gradient(circle, rgba(34 31 24/ .8) 0%, rgba(41 37 27/ .9) 35%, rgba(1 1 0/ 1) 100%);   border: 3px solid var(--color-black);
    border-radius: 5px;
    cursor: default;
 }
@@ -351,6 +351,30 @@ input[type=number] {
 .answer__text {
    width: 80%;
    text-align: center;
+}
+
+.answer__layout.visible {
+   z-index: 50;
+   display: flex;
+   animation: disappearing 2s;
+}
+
+@keyframes disappearing {
+   0% {
+      opacity: 0;
+   }
+   25% {
+      opacity: 1;
+   }
+   50% {
+      opacity: 1;
+   }
+   70% {
+      opacity: 1;
+   }
+   100% {
+      opacity: 0;
+   }
 }
 
 @media (max-width: 1439px) {

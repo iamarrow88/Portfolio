@@ -259,7 +259,7 @@ function changeSVGLing(selector, url){
   return icon;
 }
 
-function themeSwitch (event) {
+function themeSwitch () {
   isThemeLight = !isThemeLight;
   changeBodyStyle();
   if(isThemeLight) {
@@ -291,6 +291,7 @@ function closeModalWindow(e) {
     layout.classList.remove('visible');
   } else if ([...e.target.classList].includes('modal__submit')) {
     layout.classList.remove('visible');
+    showPopUp();
   }
 }
 
@@ -308,6 +309,16 @@ function openModalWindow(e) {
 body.addEventListener('click', openModalWindow);
 
 
+
+/*-------------------  POP-UP WINDOW   ---------------*/
+const popUpLayout = document.querySelector('.answer__layout');
+
+function showPopUp() {
+  popUpLayout.classList.add('visible');
+  setTimeout(()=> {
+    popUpLayout.classList.remove('visible');
+  }, 2500)
+}
 /*-------------------  ARROW TOP   ---------------*/
 
 const arrowTopBtn = document.querySelector('#arrowTop');
