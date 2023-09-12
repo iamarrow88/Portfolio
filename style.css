@@ -202,7 +202,20 @@ input:focus-visible::placeholder {
    background-color: var(--color-white);
  }
 
-.body.light-theme .section-title {
+.modal__layout.light-theme .modal__window,
+.answer__layout.light-theme .answer__window {
+   background: rgb(194,194,194);
+   background: radial-gradient(circle, rgba(194,194,194,0.8) 0%, rgba(209,209,209,0.9) 35%, rgba(230,230,230,1) 100%);
+   border: 3px solid #cfcfcf;
+}
+
+.body.light-theme .modal__input,
+.body.light-theme .modal__message {
+   background-color: rgb(225 225 225 / 50%);
+}
+
+.body.light-theme .section-title,
+.body.light-theme .answer__text {
    color: var(--color-black);
 }
 
@@ -226,7 +239,15 @@ input:focus-visible::placeholder {
 .body.light-theme .footer__container {
    max-width: 1439px;
    background-color: var(--color-black);
+}
 
+.body.light-theme .menu.visible {
+   color: var(--color-black);
+   background-color: var(--color-white);
+}
+
+.body.light-theme .mobile-menu.open .line {
+   background-color: var(--color-black);
 }
 
 .modal__layout {
