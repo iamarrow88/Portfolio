@@ -1,9 +1,3 @@
-/*TODO
- * после отправки данных в модальном окне или в поле контакты
- появляется и исчезает сообщение о том, что информация отправлена
- */
-
-
 /*-----------   BURGER MENU   ------------*/
 const mobileMenuIcon = document.querySelector('.mobile-menu');
 const body = document.querySelector('body');
@@ -199,7 +193,6 @@ const i18Obj = {
 const wordsToTranslate = document.querySelectorAll('[data-i18]');
 const langSwitcherBox = document.querySelector('.lang-switcher');
 const selectedLang = localStorage.getItem('lang') || 'en';
-const switchButtons = document.querySelectorAll('.lang-switcher__btn');
 
 function changeLang(lang, lines){
   localStorage.setItem('lang', `${lang}`);
@@ -274,16 +267,7 @@ themeBtn.addEventListener('click', themeSwitch);
 
 /*---------------MODAL WINDOW------------------*/
 
-const closeBtn = document.querySelector('.modal__close-btn');
 const layout = document.querySelector('#modal-layout');
-const submit = document.querySelector('.modal__submit');
-
-const name = document.querySelector('#name');
-const number = document.querySelector('#number');
-
-const triggers = document.querySelectorAll('.action');
-const senders = document.querySelectorAll('.send');
-
 
 function closeModalWindow(e) {
   if ([...e.target.classList].includes('modal__layout') ||
@@ -296,9 +280,6 @@ function closeModalWindow(e) {
 }
 
 layout.addEventListener('click', closeModalWindow);
-
-
-const firstBtn = document.querySelector('.promo__btn');
 
 function openModalWindow(e) {
   if([...e.target.classList].includes('action')) {
@@ -319,11 +300,11 @@ function showPopUp() {
     popUpLayout.classList.remove('visible');
   }, 2500)
 }
+
 /*-------------------  ARROW TOP   ---------------*/
 
 const arrowTopBtn = document.querySelector('#arrowTop');
 function showArrowTop() {
-
   const isHidden= pageYOffset < document.documentElement.clientHeight;
 
   if(isHidden){
