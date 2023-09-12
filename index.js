@@ -138,7 +138,8 @@ const i18Obj = {
      'send-request': 'Send',
      '[placeholder]contacts-email-placeholder': 'Your e-mail',
      '[placeholder]contacts-phone-number-placeholder': 'Your phone number',
-     '[placeholder]contacts-message-placeholder': 'Write your message'
+     '[placeholder]contacts-message-placeholder': 'Write your message',
+     'answer': 'Thank you for your request! We will call you soon.'
    },
    'ru': {
      'skills': 'Навыки',
@@ -190,7 +191,8 @@ const i18Obj = {
      'send-request': 'Отправить заявку',
      '[placeholder]contacts-email-placeholder': 'Ваш e-mail',
      '[placeholder]contacts-phone-number-placeholder': 'Ваш номер телефона',
-     '[placeholder]contacts-message-placeholder': 'Здесь можно написать Ваше сообщение'
+     '[placeholder]contacts-message-placeholder': 'Здесь можно написать Ваше сообщение',
+     'answer': 'Благодарим за заявку! Мы скоро свяжемся с Вами.'
    }
  }
 
@@ -339,10 +341,4 @@ arrowTopBtn.addEventListener('click', function(){
     left: 0,
     behavior: 'smooth'
   });
-  /*window.scrollBy({
-    top: -window.innerHeight,
-    left: 0,
-    behavior: "smooth",
-  });*/
-  /*window.scrollIntoView(false);*/
 })
