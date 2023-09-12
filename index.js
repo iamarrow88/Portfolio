@@ -230,7 +230,7 @@ langSwitcherBox.addEventListener('click', translatePageManually);
 
 
 const themeBtn = document.querySelector('.theme-switcher');
-const sectionNames = ['body', 'skills', 'portfolio', 'video', 'price', 'contacts'];
+const sectionNames = ['body', 'skills', 'portfolio', 'video', 'price', 'contacts', 'modal__layout', 'answer__layout'];
 const sections = [];
 let isThemeLight = false;
 
