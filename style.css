@@ -439,13 +439,17 @@ input[type=number] {
    justify-content: center;
    align-items: center;
    margin-left: 12px;
-   max-width: 50px;
-   max-height: 50px;
+   max-width: 45px;
+   max-height: 45px;
    cursor: pointer;
 }
 
-.theme-switcher__img {
-   width: 100%;
+.theme-switcher .svg-icon {
+   fill: var(--color-white);
+}
+
+.theme-switcher .svg-icon:hover {
+   fill: var(--color-gold);
 }
 
 .mobile-menu {

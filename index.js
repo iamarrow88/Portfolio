@@ -247,24 +247,23 @@ function findSections() {
 function changeBodyStyle () {
   sectionNames.forEach(name => {
         document.querySelector(`.${name}`).classList.toggle('light-theme');
-        console.log(document.querySelector(`.${name}`));
       }
   )
+}
+
+function changeSVGLing(selector, url){
+  const icon = document.querySelector(`.${selector}`);
+  icon.setAttribute('href', url);
+  return icon;
 }
 
 function themeSwitch (event) {
   isThemeLight = !isThemeLight;
   changeBodyStyle();
   if(isThemeLight) {
-    event.target.src='assets/svg/carbon_sun.svg';
-    event.target.alt='dark theme';
-    event.target.classList.remove('theme-switcher__dark');
-    event.target.classList.add('theme-switcher__light');
+    changeSVGLing('theme-switcher__svg', "assets/svg/sprite.svg#moon-light");
   } else {
-    event.target.src = 'assets/svg/moon.svg';
-    event.target.alt = 'light theme';
-    event.target.classList.remove('theme-switcher__light');
-    event.target.classList.add('theme-switcher__dark');
+    changeSVGLing('theme-switcher__svg', "assets/svg/sprite.svg#sun-light");
   }
 }
 

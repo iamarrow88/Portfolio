@@ -79,8 +79,12 @@
                <a class="lang-switcher__btn" data-lang="ru" href="#">ru</a>
             </div>
 
-            <div class="header__theme-switcher theme-switcher">
-               <img class="theme-switcher__img" data-theme="light" src="assets/svg/carbon_sun.svg" alt="dark theme">
+            <div class="header__theme-switcher theme-switcher svg-parent">
+               <svg class="svg-icon">
+                  <use class="theme-switcher__svg" xlink:href="assets/svg/sprite.svg#sun-light"></use>
+               </svg>
+
+               <!--<img class="theme-switcher__img" data-theme="light" src="assets/svg/carbon_sun.svg" alt="dark theme">-->
             </div>
 
             <div class="header__mobile-menu mobile-menu">
