@@ -275,7 +275,7 @@ function closeModalWindow(e) {
     layout.classList.remove('visible');
   } else if ([...e.target.classList].includes('modal__submit')) {
     layout.classList.remove('visible');
-    showPopUp();
+    showPopUp(e);
   }
 }
 
@@ -294,13 +294,16 @@ body.addEventListener('click', openModalWindow);
 /*-------------------  POP-UP WINDOW   ---------------*/
 const popUpLayout = document.querySelector('.answer__layout');
 
-function showPopUp() {
+function showPopUp(event) {
+  event.preventDefault();
   popUpLayout.classList.add('visible');
   setTimeout(()=> {
     popUpLayout.classList.remove('visible');
   }, 2500)
 }
 
+
+document.querySelector('.contacts__btn').addEventListener('click', showPopUp);
 /*-------------------  ARROW TOP   ---------------*/
 
 const arrowTopBtn = document.querySelector('#arrowTop');
